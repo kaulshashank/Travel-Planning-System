@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.4/angular.js"></script>
+    <script src="app.js" ></script>
+  </head>
+
+  <body>
+    <div class="container-fluid outerdiv">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#"><span class="span-style">Travel Planning System</span></a>
+          </div>
+        </div>
+      </nav>
+    </div>
+      <noscript>
+        <div class="nojs">Javascript is either disabled or not supported in your browser. Please enable it or use a Javascript enabled browser.</div>
+      </noscript>
+
+    <div class="main-form"  ng-app="myApp" ng-controller="myController">
+      <h1 style="text-decoration: none; "> 5 W's </h1>
+	    <div class="input-group" > 
+      <form ng-submit="Submit()" >
+	     <input type="text" ng-model="mode"  class=" input-bar form-control" placeholder="Enter mode of transport (FLIGHT/BUS/TRAIN)" autofocus />
+
+	      <input type="text" value="" ng-model="orig" class=" input-bar form-control" placeholder="Enter Origin" autofocus />
+
+	      <input type="text" value="" ng-model="dest" class=" input-bar form-control" placeholder="Enter Destination" autofocus />
+
+	      <input type="text" value="" ng-model="dd" class=" input-bar form-control" placeholder="Enter DOJ (dd)" autofocus />
+        <input type="text" value="" ng-model="mm" class=" input-bar form-control" placeholder="Enter DOJ (mm)" autofocus />
+
+	      <input type="text" value="" ng-model="pass" class=" input-bar form-control" placeholder="Enter number of passengers" autofocus />
+
+	      <input type="submit" style="margin-top: 5px;" value="Submit" class = ""/>
+        </form>
+	    </div>
+      <table class="TrainResults" ng-repeat="train in trains">
+        <tr>
+          <th> Train Name </th>
+        </tr>
+        <tr ng-repeat="i in train">
+          <td> {{i.name}} </td> 
+        </tr>
+	  </div>
+
+    <!--<div id="related-results" ng-include="'partials/related-results.html'" class="col-md-4 animated bounce related-results"></div>-->
+  </body>
+</html>
+
