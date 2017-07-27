@@ -7,10 +7,7 @@ Models and displays the schedule along with the most efficient routes (shortest 
 AUTHOR: Shashank Kaul
 EMAIL: kaulshashank96@gmail.com
 
-
-# Update Log
-
-
+UPDATES
 ## v1.0.0: 27-07-2017
 
 - Added ExpressJS and EJS modules
@@ -20,6 +17,13 @@ EMAIL: kaulshashank96@gmail.com
 	- Created 'public/' directory to store all assets (stylesheets, images, documents, etc)
 		- Added stylesheet 'styles.css'
 
+
+## v1.0.1: 27-07-2017
+
+- Added functionality to check for all the train schedules between two stations using their station code. 
+	- Added node module "require" which allows us to make API calls
+- Output is formatted and displayed to console for now.
+- Currently working on a structured page template for the train schedules to be displayed.
 
 
 
