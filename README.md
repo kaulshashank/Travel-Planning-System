@@ -8,10 +8,11 @@ AUTHOR: Shashank Kaul
 EMAIL: kaulshashank96@gmail.com
 
 
-													UPDATE LOG
----------------
-v1.0.0: 27-07-2017
----------------
+# Update Log
+
+
+## v1.0.0: 27-07-2017
+
 - Added ExpressJS and EJS modules
 - Added app.js (Main file)
 - Updated structure of the website. 
