@@ -1,0 +1,99 @@
+<% include ./partials/header %>
+<body>
+<div class="ui main text container">
+    <div class="ui huge header"> Travel Planning System Application</div>
+    <div class="ui top attached segment">
+        <form class ="ui form">
+            <div class="field">
+              <label> What mode of transport are you planning to take? </label>
+              <select class="ui search dropdown">
+                <option value="">Pick One..</option>
+                <option value="bus">Bus</option>
+                <option value="flight">Flight</option>
+                <option value="train">Train</option>
+              </select>
+            </div>
+            <div class="field">
+              <label> What purpose are you traveling for? </label>
+              <select class="ui search dropdown">
+                <option value="">Pick One..</option>
+                <option value="business">Business</option>
+                <option value="personal">Personal Vacation/Travel</option>
+              </select>
+            </div>
+            <div class="field">
+              <label> Where are you travelling from? </label>
+              <input type = "text" placeholder="Origin (3 Letter Station Code)">
+            </div>
+            <div class="field">
+              <label> Where are you travelling to? </label>
+              <input type = "text" placeholder="Destination (3 Letter Station Code)">
+            </div>
+            <div class="field">
+                <div class="nine wide field">
+                    <label>What date do you plan to leave?</label>
+                    <div class="three fields">
+                        <div class="field">
+                            <input type="text" name="" maxlength="2" placeholder="Date">
+                        </div>
+                        <div class="field">
+                            <select class="ui fluid search dropdown" name="">
+                                <option value="">Month</option>
+                                <option value="1">January</option>
+                                <option value="2">February</option>
+                                <option value="3">March</option>
+                                <option value="4">April</option>
+                                <option value="5">May</option>
+                                <option value="6">June</option>
+                                <option value="7">July</option>
+                                <option value="8">August</option>
+                                <option value="9">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="" maxlength="4" placeholder="Year">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <div class="nine wide field">
+                    <label>What date do you plan to return?</label>
+                    <div class="three fields">
+                        <div class="field">
+                            <input type="text" name="" maxlength="2" placeholder="Date">
+                        </div>
+                        <div class="field">
+                            <select class="ui fluid search dropdown" name="">
+                                <option value="">Month</option>
+                                <option value="1">January</option>
+                                <option value="2">February</option>
+                                <option value="3">March</option>
+                                <option value="4">April</option>
+                                <option value="5">May</option>
+                                <option value="6">June</option>
+                                <option value="7">July</option>
+                                <option value="8">August</option>
+                                <option value="9">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="" maxlength="4" placeholder="Year">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="ui teal button">
+          Submit!
+        </div>
+    </div>
+</div>
+</body>
+<% include ./partials/footer %>
