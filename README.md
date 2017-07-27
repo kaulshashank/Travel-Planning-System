@@ -5,6 +5,7 @@ Uses API requests to get real-time train and bus schedules.
 Models and displays the schedule along with the most efficient routes (shortest part algorithm).
 
 AUTHOR: Shashank Kaul
+
 EMAIL: kaulshashank96@gmail.com
 
 UPDATES
