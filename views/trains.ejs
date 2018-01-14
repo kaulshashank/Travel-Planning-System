@@ -1,0 +1,56 @@
+<% include ./partials/header %>
+
+<div class="ui main text container">
+  <div class="ui huge header"> Select a train </div>
+  <div class="ui top attached segment">
+      <form action="/hotels" method="post" class = "ui form">
+        <table class="ui celled table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Train Name/Number</th>
+              <th>Origin Station (Code)</th>
+              <th>Departs Origin At</th>
+              <th>Travel Time</th>
+              <th>Destination Station (Code)</th>
+              <th>Arrives Destination At</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for(var i=0; i < data.trains.length; i++) { %>
+              <tr>
+                <td class="collapsing">
+                  <div class="ui fitted slider checkbox">
+                    <input name="selected_train" value="<%= data.trains[i].number%>" type="checkbox"> <label></label>
+                  </div>
+                </td>
+                <td>
+                  <%= data.trains[i].name +' / ' + data.trains[i].number %>
+                </td>
+                <td>
+                  <%= data.trains[i].from_station.name %>
+                </td>
+                <td>
+                  <%= data.trains[i].src_departure_time %>
+                </td>
+                <td>
+                  <%= data.trains[i].travel_time %>
+                </td>
+                <td>
+                  <%= data.trains[i].to_station.name %>
+                </td>
+                <td>
+                  <%= data.trains[i].dest_arrival_time %>
+                </td>
+              </tr>
+            <% } %>
+          </tbody>
+        <table>
+        <div class="ui right floated small primary labeled icon button" onClick="javascript:this.parentNode.submit();">
+          Select Hotels >
+        </div>
+      </form>
+  </div>
+</div>
+
+<% include ./partials/footer %>

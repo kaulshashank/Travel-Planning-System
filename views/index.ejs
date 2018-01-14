@@ -1,12 +1,12 @@
 <% include ./partials/header %>
 <body>
 <div class="ui main text container">
-    <div class="ui huge header"> Travel Planning System Application</div>
+    <div class="ui huge header"> Travel Planning System Application </div>
     <div class="ui top attached segment">
-        <form class ="ui form">
+        <form action="/trains" method="post" class ="ui form">
             <div class="field">
               <label> What mode of transport are you planning to take? </label>
-              <select class="ui search dropdown">
+              <select name="mode_of_travel" class="ui search dropdown">
                 <option value="">Pick One..</option>
                 <option value="bus">Bus</option>
                 <option value="flight">Flight</option>
@@ -15,7 +15,7 @@
             </div>
             <div class="field">
               <label> What purpose are you traveling for? </label>
-              <select class="ui search dropdown">
+              <select name="purp_of_travel" class="ui search dropdown">
                 <option value="">Pick One..</option>
                 <option value="business">Business</option>
                 <option value="personal">Personal Vacation/Travel</option>
@@ -23,21 +23,21 @@
             </div>
             <div class="field">
               <label> Where are you travelling from? </label>
-              <input type = "text" placeholder="Origin (3 Letter Station Code)">
+              <input name="origin_code" type="text" placeholder="Origin (3 Letter Station Code)">
             </div>
             <div class="field">
               <label> Where are you travelling to? </label>
-              <input type = "text" placeholder="Destination (3 Letter Station Code)">
+              <input name="dest_code" type="text" placeholder="Destination (3 Letter Station Code)">
             </div>
             <div class="field">
                 <div class="nine wide field">
                     <label>What date do you plan to leave?</label>
                     <div class="three fields">
                         <div class="field">
-                            <input type="text" name="" maxlength="2" placeholder="Date">
+                            <input type="text" name="depart_date" maxlength="2" placeholder="Date">
                         </div>
                         <div class="field">
-                            <select class="ui fluid search dropdown" name="">
+                            <select name="depart_month" class="ui fluid search dropdown">
                                 <option value="">Month</option>
                                 <option value="1">January</option>
                                 <option value="2">February</option>
@@ -54,7 +54,7 @@
                             </select>
                         </div>
                         <div class="field">
-                            <input type="text" name="" maxlength="4" placeholder="Year">
+                            <input type="text" name="depart_year" maxlength="4" placeholder="Year">
                         </div>
                     </div>
                 </div>
@@ -64,10 +64,10 @@
                     <label>What date do you plan to return?</label>
                     <div class="three fields">
                         <div class="field">
-                            <input type="text" name="" maxlength="2" placeholder="Date">
+                            <input type="text" name="arriv_date" maxlength="2" placeholder="Date">
                         </div>
                         <div class="field">
-                            <select class="ui fluid search dropdown" name="">
+                            <select class="ui fluid search dropdown" name="arriv-month">
                                 <option value="">Month</option>
                                 <option value="1">January</option>
                                 <option value="2">February</option>
@@ -84,15 +84,15 @@
                             </select>
                         </div>
                         <div class="field">
-                            <input type="text" name="" maxlength="4" placeholder="Year">
+                            <input type="text" name="arriv_year" maxlength="4" placeholder="Year">
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="ui teal button" onClick="javascript:this.parentNode.submit();">
+              Select Trains >
+            </div>
         </form>
-        <div class="ui teal button">
-          Submit!
-        </div>
     </div>
 </div>
 </body>
