@@ -3,7 +3,7 @@
 <div class="ui main text container">
   <div class="ui huge header"> Select a train </div>
   <div class="ui top attached segment">
-      <form action="/hotels" method="post" class = "ui form">
+      <form action="/plan" method="post" class = "ui form">
         <table class="ui celled table">
           <thead>
             <tr>
@@ -21,7 +21,7 @@
               <tr>
                 <td class="collapsing">
                   <div class="ui fitted slider checkbox">
-                    <input name="selected_train" value="<%= data.trains[i].number%>" type="checkbox"> <label></label>
+                    <input name="selected_train" value="<%= data.trains[i].name%>" type="checkbox"> <label></label>
                   </div>
                 </td>
                 <td>
