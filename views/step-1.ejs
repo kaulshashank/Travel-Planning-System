@@ -1,11 +1,10 @@
 <% include ./partials/header %>
-<%= console.log(data) %>
 <div class="ui main text container">
   <div class="ui huge header"> Select a train </div>
   <div class="ui top attached segment">
       <form action="/step-1" method="post" class = "ui form">
         <div class="inline fields">
-          <input type="hidden" name="train_number" value="">
+          <input type="hidden" name="location" value="<%= city_name %>">
           <label> Do you want to go site-seeing? </label>
           <div class="field">
             <div class="ui radio checkbox">

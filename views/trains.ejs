@@ -17,30 +17,30 @@
             </tr>
           </thead>
           <tbody>
-            <% for(var i=0; i < data.trains.length; i++) { %>
+            <% for(var i=0; i < dat.trains.length; i++) { %>
               <tr>
                 <td class="collapsing">
                   <div class="ui fitted slider checkbox">
-                    <input name="selected_train" value="<%= data.trains[i].name%>" type="checkbox"> <label></label>
+                    <input name="selected_train" value="<%= dat.trains[i].to_station.code %>" type="checkbox"> <label></label>
                   </div>
                 </td>
                 <td>
-                  <%= data.trains[i].name +' / ' + data.trains[i].number %>
+                  <%= dat.trains[i].name +' / ' + dat.trains[i].number %>
                 </td>
                 <td>
-                  <%= data.trains[i].from_station.name %>
+                  <%= dat.trains[i].from_station.name %>
                 </td>
                 <td>
-                  <%= data.trains[i].src_departure_time %>
+                  <%= dat.trains[i].src_departure_time %>
                 </td>
                 <td>
-                  <%= data.trains[i].travel_time %>
+                  <%= dat.trains[i].travel_time %>
                 </td>
                 <td>
-                  <%= data.trains[i].to_station.name %>
+                  <%= dat.trains[i].to_station.name %>
                 </td>
                 <td>
-                  <%= data.trains[i].dest_arrival_time %>
+                  <%= dat.trains[i].dest_arrival_time %>
                 </td>
               </tr>
             <% } %>
